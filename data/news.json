@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "category": "event",
+      "categoryLabel": "Event",
+      "title": "Annual Conservation Forum 2025 — Kilwa District",
+      "date": "June 14, 2025",
+      "excerpt": "Join conservation practitioners, government officials, and community leaders for two days of dialogue on Tanzania's forest and coastal futures.",
+      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&auto=format&fit=crop&q=70",
+      "content": "<p>TAMCO's Annual Conservation Forum brings together delegates from across Tanzania to share field learnings, celebrate community achievements, and forge new partnerships for ecosystem restoration.</p><p>This year's theme: <strong>\"Landscapes of Hope — Communities Leading Climate Action.\"</strong></p><p>The forum will feature keynote addresses from the Ministry of Natural Resources and Tourism, panel discussions on coastal and agroforestry conservation, and field excursions to TAMCO's flagship mangrove restoration sites along the Kilwa coast.</p><p>Registration is open to NGOs, government agencies, researchers, and community members. Limited seats available — register early.</p>"
+    },
+    {
+      "id": 2,
+      "category": "field",
+      "categoryLabel": "Field Activity",
+      "title": "486,509 Mangrove Seedlings Planted Along the Kilwa Coast",
+      "date": "May 28, 2025",
+      "excerpt": "TAMCO has restored 288.8 hectares of mangrove forests critical for marine biodiversity and coastal protection, planting over 486,509 seedlings with community volunteers.",
+      "image": "assets/img_03.jpg",
+      "content": "<p>TAMCO has achieved a landmark milestone in coastal conservation — planting over 486,509 mangrove seedlings and restoring 288.8 hectares of mangrove forests along the Kilwa coast in Lindi Region.</p><p>These restored forests are critical for marine biodiversity and coastal protection, acting as natural barriers against coastal erosion and the impacts of climate change. TAMCO engaged schools, youth groups, and community associations to raise awareness and actively participate in tree planting campaigns.</p><p>The mangrove restoration work has significantly reduced coastal erosion, improved marine habitat for local fisheries, and empowered communities — especially women and youth — to become active stewards of their coastal environment.</p>"
+    },
+    {
+      "id": 3,
+      "category": "announcement",
+      "categoryLabel": "Announcement",
+      "title": "TAMCO Receives USAID Grant for Agroforestry Expansion",
+      "date": "May 10, 2025",
+      "excerpt": "A new three-year grant will allow TAMCO to scale its flagship agroforestry program to five new districts, reaching 5,000 additional smallholder farming families.",
+      "image": "https://images.unsplash.com/photo-1589519160732-576f165b9943?w=600&auto=format&fit=crop&q=70",
+      "content": "<p>TAMCO is thrilled to announce a three-year, $1.2 million grant from USAID Tanzania's Feed the Future initiative to scale our Agroforestry & Forest Conservation program.</p><p>The funding will allow expansion into Iringa, Morogoro, Mbeya, Ruvuma, and Songwe regions — bringing climate-smart agroforestry training, native tree seedlings, and market linkages to an additional 5,000 smallholder families.</p><p>Partner implementing organizations include Sokoine University of Agriculture (SUA) and the Tanzania Forest Services Agency (TFS).</p>"
+    },
+    {
+      "id": 4,
+      "category": "field",
+      "categoryLabel": "Field Activity",
+      "title": "TAMCO Trains Women & Youth on Climate-Smart Agriculture in Kilwa",
+      "date": "April 22, 2025",
+      "excerpt": "TAMCO is training women and youth farmers on drought-resilient crops including sunflower and sustainable soil management, building long-term food security across Kilwa District.",
+      "image": "assets/img_03.jpg",
+      "content": "<p>TAMCO is actively training women and youth farmers on climate-smart agriculture practices in Kilwa District and surrounding areas. The training focuses on practical, community-relevant solutions — including drought-resilient crops such as sunflower — that help farmers adapt to changing rainfall patterns and secure reliable incomes.</p><p>Participants also receive training in sustainable soil management, composting, and water harvesting techniques. By prioritising women and youth, TAMCO ensures that the most vulnerable community members become active agents of environmental and economic resilience.</p>"
+    },
+    {
+      "id": 5,
+      "category": "event",
+      "categoryLabel": "Event",
+      "title": "World Environment Day Community Clean-Up — Dar es Salaam",
+      "date": "June 5, 2025",
+      "excerpt": "On World Environment Day, TAMCO and partner organizations will host a coastal clean-up and awareness campaign along the Msasani Bay shoreline.",
+      "image": "assets/img_04.jpg",
+      "content": "<p>To mark World Environment Day 2025, TAMCO is partnering with Dar es Salaam City Council, TanzaBlue, and local schools to host a coastal clean-up and public awareness event at Msasani Bay.</p><p>Activities include beach clean-up, mangrove seedling giveaway, educational exhibitions, and a panel discussion on ocean plastics and marine conservation. All are welcome — families, students, and corporate teams.</p><p>Time: 7:00 AM – 12:00 PM. Refreshments provided. Bring gloves and closed-toe shoes.</p>"
+    },
+    {
+      "id": 6,
+      "category": "announcement",
+      "categoryLabel": "Announcement",
+      "title": "TAMCO 2024 Annual Report Now Available",
+      "date": "March 30, 2025",
+      "excerpt": "Our 2024 Annual Report documents a year of record impact — 486,509 mangrove seedlings planted, 288.8 ha of mangrove restored, and communities empowered across Tanzania.",
+      "image": "assets/img_03.jpg",
+      "content": "<p>TAMCO's 2024 Annual Report is now available for download. The report documents a landmark year for the organisation, including record planting outputs and major milestones in mangrove restoration along the Kilwa coast.</p><p>Key highlights: 486,509 mangrove seedlings planted, 288.8 hectares of mangrove forest restored, 5,700+ fruit and shading seedlings planted, and communities across Kilwa District empowered as active environmental stewards.</p><p>Download the full report at tamco.org.tz/annual-report-2024.</p>"
+    }
+  ]
+}

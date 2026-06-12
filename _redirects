@@ -1,0 +1,5 @@
+# Redirect www to non-www
+https://www.tamco.or.tz/* https://tamco.or.tz/:splat 301!
+
+# SPA fallback
+/*    /index.html   200

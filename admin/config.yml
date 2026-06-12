@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# This tells the CMS where to store uploaded photos
+media_folder: "assets"
+public_folder: "/assets"
+
+# Friendly name shown at the top of the admin panel
+site_url: https://tamco.or.tz
+logo_url: /assets/img_02.png
+
+collections:
+  - name: "news"
+    label: "News & Events"
+    label_singular: "News Article"
+    description: "Add, edit, or remove articles shown in the News & Events section of the website."
+    files:
+      - name: "news_list"
+        label: "All News Articles"
+        file: "data/news.json"
+        format: "json"
+        fields:
+          - label: "Articles"
+            name: "items"
+            widget: "list"
+            label_singular: "Article"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - label: "ID"
+                name: "id"
+                widget: "number"
+                hint: "Must be a unique number for each article (e.g. 1, 2, 3, 7, 8...). Never reuse a number."
+                value_type: "int"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                hint: "The headline of the article"
+              - label: "Date"
+                name: "date"
+                widget: "datetime"
+                date_format: "MMMM D, YYYY"
+                time_format: false
+                format: "YYYY-MM-DD"
+                hint: "The date this happened or was published"
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Event", value: "event" }
+                  - { label: "Field Activity", value: "field" }
+                  - { label: "Announcement", value: "announcement" }
+              - label: "Category Label (shown on the badge)"
+                name: "categoryLabel"
+                widget: "select"
+                options:
+                  - "Event"
+                  - "Field Activity"
+                  - "Announcement"
+              - label: "Short Description (shown on the card)"
+                name: "excerpt"
+                widget: "text"
+                hint: "1-2 sentences. This appears on the news card before someone clicks Read More."
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                hint: "Upload a photo for this article (recommended size: landscape, at least 800px wide)"
+              - label: "Full Article"
+                name: "content"
+                widget: "text"
+                hint: "Write the full story here. Press Enter twice to start a new paragraph."

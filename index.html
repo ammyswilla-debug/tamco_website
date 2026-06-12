@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAMCO – Tanzania Agroforestry & Marine Conservation Organisation</title>
+<meta name="description" content="Tanzania Agroforestry & Marine Conservation Organisation (TAMCO) — enhancing sustainable livelihoods and preventing biodiversity loss through responsible land use and community outreach across Tanzania.">
+<meta name="keywords" content="TAMCO, Tanzania, agroforestry, mangrove restoration, marine conservation, NGO, Kilwa, Lindi, community development">
+<meta name="author" content="TAMCO">
+<meta property="og:title" content="TAMCO – Tanzania Agroforestry & Marine Conservation Organisation">
+<meta property="og:description" content="Restoring ecosystems, empowering communities across Tanzania since our founding in Kilwa District, Lindi Region.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tamco.or.tz">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TAMCO Tanzania">
+<meta name="twitter:description" content="Restoring ecosystems, empowering communities across Tanzania.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://tamco.or.tz">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a3a2a;
+    --forest-mid: #2d5a3d;
+    --leaf: #4a8c5c;
+    --sage: #7ab88a;
+    --mint: #b5d9b8;
+    --cream: #f7f4ef;
+    --sand: #e8e0d0;
+    --earth: #8b6f47;
+    --bark: #5c4033;
+    --white: #ffffff;
+    --text-dark: #1a1f1c;
+    --text-mid: #3d4840;
+    --text-light: #6b7c70;
+    --accent: #c17f3a;
+    --accent-light: #f0d4a8;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow: 0 4px 24px rgba(26,58,42,0.10);
+    --shadow-hover: 0 8px 40px rgba(26,58,42,0.18);
+    --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text-dark); background: var(--white); overflow-x: hidden; }
+  h1, h2, h3, h4, h5 { font-family: 'Fraunces', serif; }
+
+  /* ===== UTILITY ===== */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 96px 0; }
+  .section-label { font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--leaf); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .section-label::before { content: ''; display: block; width: 24px; height: 2px; background: var(--leaf); }
+  .section-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--forest); line-height: 1.1; }
+  .section-subtitle { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; margin-top: 16px; max-width: 560px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.95rem; cursor: pointer; transition: var(--transition); text-decoration: none; border: none; }
+  .btn-primary { background: var(--forest); color: var(--white); }
+  .btn-primary:hover { background: var(--forest-mid); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .btn-secondary { background: transparent; color: var(--forest); border: 1.5px solid var(--forest); }
+  .btn-secondary:hover { background: var(--forest); color: var(--white); transform: translateY(-2px); }
+  .btn-accent { background: var(--accent); color: var(--white); }
+  .btn-accent:hover { background: var(--bark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(193,127,58,0.35); }
+  .btn-outline-white { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.6); }
+  .btn-outline-white:hover { background: rgba(255,255,255,0.15); border-color: var(--white); }
+
+  /* fade-in on scroll */
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+
+  /* ===== NAV ===== */
+  #navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+    padding: 0 0;
+  }
+  #navbar.scrolled { border-bottom-color: var(--sand); box-shadow: 0 2px 20px rgba(26,58,42,0.08); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .nav-logo-text { display: flex; flex-direction: column; }
+  .nav-logo-name { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1rem; color: var(--forest); line-height: 1.1; }
+  .nav-logo-sub { font-size: 10px; color: var(--text-light); letter-spacing: 0.06em; text-transform: uppercase; line-height: 1; margin-top: 3px; }
+  .nav-logo-icon { width: 40px; height: 40px; background: var(--forest); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .nav-logo-icon svg { width: 24px; height: 24px; fill: var(--mint); }
+  .nav-logo-text { display: flex; flex-direction: column; }
+  .nav-logo-name { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.1rem; color: var(--forest); line-height: 1; }
+  .nav-logo-sub { font-size: 10px; color: var(--text-light); letter-spacing: 0.08em; text-transform: uppercase; line-height: 1; margin-top: 3px; }
+  .nav-menu { display: flex; align-items: center; gap: 4px; list-style: none; }
+  .nav-item { position: relative; }
+  .nav-link { display: flex; align-items: center; gap: 4px; padding: 8px 14px; border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 500; color: var(--text-mid); text-decoration: none; cursor: pointer; transition: var(--transition); background: none; border: none; font-family: 'DM Sans', sans-serif; }
+  .nav-link:hover, .nav-link.active { color: var(--forest); background: var(--cream); }
+  .nav-link .chevron { width: 12px; height: 12px; transition: transform 0.2s; }
+  .nav-item:hover .chevron { transform: rotate(180deg); }
+  .dropdown { position: absolute; top: calc(100% + 8px); left: 0; background: var(--white); border-radius: var(--radius-md); box-shadow: 0 16px 40px rgba(0,0,0,0.14); border: 1px solid var(--sand); min-width: 200px; padding: 8px; opacity: 0; pointer-events: none; transform: translateY(-8px); transition: var(--transition); z-index: 100; }
+  .nav-item:hover .dropdown { opacity: 1; pointer-events: all; transform: none; }
+  .dropdown a { display: block; padding: 9px 14px; font-size: 0.88rem; color: var(--text-mid); text-decoration: none; border-radius: var(--radius-sm); transition: var(--transition); }
+  .dropdown a:hover { background: var(--cream); color: var(--forest); }
+  .nav-actions { display: flex; align-items: center; gap: 12px; }
+  .nav-search-btn { background: none; border: none; cursor: pointer; padding: 8px; color: var(--text-light); display: flex; align-items: center; transition: var(--transition); border-radius: 50%; }
+  .nav-search-btn:hover { background: var(--cream); color: var(--forest); }
+  .nav-cta { padding: 10px 22px; font-size: 0.88rem; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--forest); border-radius: 2px; transition: var(--transition); }
+
+  /* search overlay */
+  #search-overlay { position: fixed; inset: 0; background: rgba(26,58,42,0.88); z-index: 2000; display: none; align-items: flex-start; justify-content: center; padding-top: 100px; }
+  #search-overlay.open { display: flex; }
+  .search-box { background: var(--white); border-radius: var(--radius-lg); padding: 24px; width: 100%; max-width: 600px; margin: 0 16px; }
+  .search-box input { width: 100%; border: none; font-size: 1.4rem; font-family: 'DM Sans', sans-serif; color: var(--text-dark); outline: none; background: transparent; }
+  .search-results { margin-top: 16px; border-top: 1px solid var(--sand); padding-top: 16px; }
+  .search-result-item { padding: 10px 0; cursor: pointer; color: var(--text-mid); font-size: 0.9rem; border-bottom: 1px solid var(--sand); transition: var(--transition); }
+  .search-result-item:hover { color: var(--forest); padding-left: 6px; }
+
+  /* ===== HERO ===== */
+  #hero {
+    min-height: 100vh;
+    background: 
+      linear-gradient(135deg, rgba(26,58,42,0.82) 0%, rgba(45,90,61,0.65) 50%, rgba(74,140,92,0.45) 100%),
+      url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1800&auto=format&fit=crop&q=80') center/cover no-repeat;
+    display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 72px;
+  }
+  .hero-texture { position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E"); pointer-events: none; }
+  .hero-content { position: relative; z-index: 1; padding: 80px 0; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: var(--mint); padding: 7px 16px; border-radius: 50px; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 32px; backdrop-filter: blur(8px); }
+  .hero-badge-dot { width: 6px; height: 6px; background: var(--sage); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.3)} }
+  .hero-title { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 700; color: var(--white); line-height: 1.05; max-width: 720px; margin-bottom: 24px; }
+  .hero-title em { font-style: italic; color: var(--mint); }
+  .hero-desc { font-size: 1.15rem; color: rgba(255,255,255,0.78); line-height: 1.7; max-width: 520px; margin-bottom: 48px; }
+  .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 64px; }
+  .hero-stats { display: flex; flex-wrap: wrap; gap: 40px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.15); }
+  .hero-stat-num { font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 700; color: var(--white); line-height: 1; }
+  .hero-stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+  .hero-scroll { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; animation: float 3s ease-in-out infinite; }
+  @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(-8px)} }
+  .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent); }
+
+  /* ===== ABOUT ===== */
+  #about { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-image-wrap { position: relative; }
+  .about-image-main { width: 100%; height: 500px; object-fit: cover; border-radius: var(--radius-lg); display: block; background: url('assets/img_01.jpg') center/cover; }
+  .about-image-card { position: absolute; bottom: -28px; right: -28px; background: var(--white); border-radius: var(--radius-md); padding: 20px 24px; box-shadow: var(--shadow); border: 1px solid var(--sand); min-width: 190px; }
+  .about-card-num { font-family: 'Fraunces', serif; font-size: 2.4rem; font-weight: 700; color: var(--forest); line-height: 1; }
+  .about-card-label { font-size: 0.82rem; color: var(--text-light); margin-top: 4px; }
+  .about-image-badge { position: absolute; top: 24px; left: -20px; background: var(--forest); color: var(--white); border-radius: var(--radius-md); padding: 12px 18px; box-shadow: var(--shadow); }
+  .about-badge-year { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; line-height: 1; }
+  .about-badge-text { font-size: 0.75rem; opacity: 0.7; margin-top: 2px; }
+  .about-pillars { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+  .pillar { display: flex; gap: 16px; align-items: flex-start; padding: 20px; background: var(--white); border-radius: var(--radius-md); border: 1px solid var(--sand); transition: var(--transition); }
+  .pillar:hover { box-shadow: var(--shadow); transform: translateX(4px); }
+  .pillar-icon { width: 44px; height: 44px; background: var(--forest); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; }
+  .pillar-title { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600; color: var(--forest); }
+  .pillar-desc { font-size: 0.87rem; color: var(--text-light); line-height: 1.6; margin-top: 4px; }
+
+  /* ===== PROGRAMS ===== */
+  #programs { background: var(--white); }
+  .programs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 56px; }
+  .program-card { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--sand); transition: var(--transition); background: var(--white); }
+  .program-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-6px); }
+  .program-image { height: 200px; background-size: cover; background-position: center; position: relative; }
+  .program-tag { position: absolute; top: 16px; left: 16px; background: var(--forest); color: var(--white); padding: 5px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 500; }
+  .program-body { padding: 24px; }
+  .program-title { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; color: var(--forest); margin-bottom: 10px; }
+  .program-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.65; margin-bottom: 16px; }
+  .program-bullets { list-style: none; margin-bottom: 20px; }
+  .program-bullets li { font-size: 0.83rem; color: var(--text-mid); padding: 5px 0; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--sand); }
+  .program-bullets li:last-child { border-bottom: none; }
+  .program-bullets li::before { content: ''; width: 6px; height: 6px; background: var(--leaf); border-radius: 50%; flex-shrink: 0; }
+  .program-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.88rem; font-weight: 600; color: var(--forest); text-decoration: none; transition: var(--transition); }
+  .program-link:hover { gap: 10px; color: var(--leaf); }
+
+  /* ===== IMPACT ===== */
+  #impact { background: var(--forest); position: relative; overflow: hidden; }
+  .impact-bg { position: absolute; inset: 0; opacity: 0.05; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='30' fill='none' stroke='%23fff' stroke-width='1'/%3E%3C/svg%3E"); }
+  .impact-header { text-align: center; max-width: 640px; margin: 0 auto 64px; }
+  .impact-header .section-label { justify-content: center; color: var(--mint); }
+  .impact-header .section-label::before { background: var(--mint); }
+  .impact-header .section-title { color: var(--white); }
+  .impact-header .section-subtitle { color: rgba(255,255,255,0.6); }
+  .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .impact-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-lg); padding: 32px 24px; text-align: center; transition: var(--transition); }
+  .impact-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
+  .impact-icon { font-size: 2.2rem; margin-bottom: 16px; display: block; }
+  .impact-num { font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 700; color: var(--white); line-height: 1; }
+  .impact-num span { color: var(--mint); }
+  .impact-label { font-size: 0.88rem; color: rgba(255,255,255,0.6); margin-top: 8px; line-height: 1.4; }
+
+  /* ===== NEWS ===== */
+  #news { background: var(--cream); }
+  .news-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+  .news-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+  .filter-btn { padding: 8px 18px; border-radius: 50px; border: 1.5px solid var(--sand); background: var(--white); color: var(--text-light); font-size: 0.85rem; cursor: pointer; transition: var(--transition); font-family: 'DM Sans', sans-serif; font-weight: 500; }
+  .filter-btn.active, .filter-btn:hover { border-color: var(--forest); background: var(--forest); color: var(--white); }
+  .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .news-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--sand); transition: var(--transition); cursor: pointer; }
+  .news-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-5px); }
+  .news-image { height: 200px; background-size: cover; background-position: center; position: relative; }
+  .news-category { position: absolute; top: 14px; left: 14px; background: var(--accent); color: var(--white); padding: 4px 12px; border-radius: 50px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  .news-body { padding: 22px; }
+  .news-date { font-size: 0.78rem; color: var(--text-light); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+  .news-title { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--forest); line-height: 1.35; margin-bottom: 10px; }
+  .news-excerpt { font-size: 0.85rem; color: var(--text-light); line-height: 1.65; margin-bottom: 16px; }
+  .news-read-more { font-size: 0.85rem; font-weight: 600; color: var(--leaf); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition); }
+  .news-read-more:hover { gap: 10px; }
+
+  /* ===== CTA BANNER ===== */
+  #cta-banner {
+    background: 
+      linear-gradient(rgba(26,58,42,0.9), rgba(26,58,42,0.85)),
+      url('https://images.unsplash.com/photo-1589519160732-576f165b9943?w=1400&auto=format&fit=crop&q=80') center/cover;
+    padding: 96px 0; text-align: center;
+  }
+  .cta-title { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 700; color: var(--white); max-width: 700px; margin: 0 auto 16px; line-height: 1.1; }
+  .cta-title em { color: var(--mint); font-style: italic; }
+  .cta-desc { color: rgba(255,255,255,0.65); font-size: 1.05rem; max-width: 520px; margin: 0 auto 48px; line-height: 1.7; }
+  .cta-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
+
+  /* ===== FOOTER ===== */
+  #footer { background: #0f2419; padding: 72px 0 32px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+  .footer-brand-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .footer-brand-icon { width: 38px; height: 38px; background: var(--forest-mid); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+  .footer-brand-name { font-family: 'Fraunces', serif; font-weight: 700; color: var(--white); font-size: 1.1rem; }
+  .footer-desc { font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 28px; }
+  .footer-socials { display: flex; gap: 10px; }
+  .social-btn { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: var(--transition); border: 1px solid rgba(255,255,255,0.08); }
+  .social-btn:hover { background: var(--forest-mid); color: var(--white); }
+  .footer-col-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 20px; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 12px; }
+  .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.87rem; transition: var(--transition); }
+  .footer-links a:hover { color: var(--mint); padding-left: 4px; }
+  .footer-contact-item { display: flex; gap: 10px; margin-bottom: 14px; font-size: 0.87rem; color: rgba(255,255,255,0.45); align-items: flex-start; }
+  .footer-contact-item strong { color: rgba(255,255,255,0.7); display: block; font-size: 0.8rem; margin-bottom: 2px; font-weight: 500; }
+  .newsletter-label { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+  .newsletter-form { display: flex; gap: 8px; }
+  .newsletter-input { flex: 1; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 11px 14px; color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; outline: none; transition: var(--transition); }
+  .newsletter-input::placeholder { color: rgba(255,255,255,0.3); }
+  .newsletter-input:focus { border-color: var(--sage); background: rgba(255,255,255,0.1); }
+  .newsletter-submit { background: var(--leaf); color: var(--white); border: none; border-radius: 8px; padding: 11px 18px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.85rem; transition: var(--transition); }
+  .newsletter-submit:hover { background: var(--forest-mid); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-bottom-text { font-size: 0.82rem; color: rgba(255,255,255,0.3); }
+  .footer-bottom-links { display: flex; gap: 24px; }
+  .footer-bottom-links a { font-size: 0.82rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: var(--transition); }
+  .footer-bottom-links a:hover { color: rgba(255,255,255,0.65); }
+
+  /* Modal */
+  #modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 3000; display: none; align-items: center; justify-content: center; padding: 24px; }
+  #modal-overlay.open { display: flex; }
+  .modal { background: var(--white); border-radius: var(--radius-lg); max-width: 700px; width: 100%; max-height: 85vh; overflow-y: auto; }
+  .modal-header { padding: 28px 32px 0; display: flex; justify-content: space-between; align-items: flex-start; }
+  .modal-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; color: var(--forest); max-width: 520px; line-height: 1.2; }
+  .modal-close { background: none; border: none; cursor: pointer; font-size: 1.5rem; color: var(--text-light); padding: 4px; line-height: 1; }
+  .modal-image { margin: 24px 32px 0; height: 280px; border-radius: var(--radius-md); background-size: cover; background-position: center; }
+  .modal-body { padding: 24px 32px 32px; }
+  .modal-meta { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+  .modal-content { font-size: 0.95rem; color: var(--text-mid); line-height: 1.75; }
+  .modal-content p { margin-bottom: 16px; }
+
+  /* Contact form */
+  #contact { background: var(--white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .contact-form { background: var(--cream); border-radius: var(--radius-lg); padding: 40px; }
+  .form-group { margin-bottom: 20px; }
+  .form-label { display: block; font-size: 0.85rem; font-weight: 500; color: var(--text-mid); margin-bottom: 7px; }
+  .form-input, .form-textarea { width: 100%; padding: 12px 16px; border: 1.5px solid var(--sand); border-radius: var(--radius-sm); font-family: 'DM Sans', sans-serif; font-size: 0.93rem; color: var(--text-dark); background: var(--white); outline: none; transition: var(--transition); }
+  .form-input:focus, .form-textarea:focus { border-color: var(--leaf); box-shadow: 0 0 0 3px rgba(74,140,92,0.12); }
+  .form-textarea { min-height: 130px; resize: vertical; }
+  .form-success { display: none; background: var(--forest); color: var(--white); padding: 16px 20px; border-radius: var(--radius-md); font-size: 0.9rem; margin-top: 16px; text-align: center; }
+  .contact-info-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 28px; }
+  .contact-info-icon { width: 44px; height: 44px; background: var(--cream); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .contact-info-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light); }
+  .contact-info-value { font-size: 0.95rem; color: var(--text-dark); font-weight: 500; margin-top: 3px; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .programs-grid { grid-template-columns: 1fr 1fr; }
+    .impact-grid { grid-template-columns: repeat(2, 1fr); }
+    .news-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav-logo-sub { display: none; }
+    .nav-logo-name { font-size: 0.88rem; }
+    .section { padding: 64px 0; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-image-wrap { order: -1; }
+    .about-image-main { height: 300px; }
+    .about-image-card { right: 0; bottom: -20px; }
+    .about-image-badge { left: 0; }
+    .programs-grid { grid-template-columns: 1fr; }
+    .impact-grid { grid-template-columns: 1fr 1fr; }
+    .news-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-menu, .nav-actions { display: none; }
+    .hamburger { display: flex; }
+    .nav-actions.show { display: flex; flex-direction: column; position: fixed; inset: 0; background: var(--white); z-index: 999; padding: 90px 24px 40px; align-items: flex-start; }
+    .hero-stats { gap: 24px; }
+    .news-header { flex-direction: column; align-items: flex-start; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+  @media (max-width: 480px) {
+    .impact-grid { grid-template-columns: 1fr; }
+    .hero-buttons { flex-direction: column; }
+    .hero-buttons .btn { justify-content: center; }
+  }
+
+  /* mobile nav open state */
+  .mobile-nav-open { position: fixed; inset: 0; background: var(--white); z-index: 999; padding: 90px 32px 40px; display: flex; flex-direction: column; gap: 4px; overflow-y: auto; }
+  .mobile-nav-link { display: block; padding: 14px 16px; font-size: 1.15rem; font-family: 'Fraunces', serif; color: var(--forest); text-decoration: none; border-radius: var(--radius-md); transition: var(--transition); }
+  .mobile-nav-link:hover { background: var(--cream); }
+  .mobile-nav-divider { height: 1px; background: var(--sand); margin: 8px 0; }
+</style>
+<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- SEARCH OVERLAY -->
+<div id="search-overlay">
+  <div class="search-box">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b7c70" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="search-input" placeholder="Search TAMCO…" autocomplete="off">
+      <button onclick="closeSearch()" style="background:none;border:none;cursor:pointer;color:#6b7c70;font-size:1.4rem;line-height:1;">×</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="modal-overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal" id="modal-content"></div>
+</div>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav" style="display:none;">
+  <div class="mobile-nav-open">
+    <button onclick="closeMobileNav()" style="position:absolute;top:20px;right:24px;background:none;border:none;font-size:1.8rem;cursor:pointer;color:var(--forest);">×</button>
+    <a class="mobile-nav-link" href="#about">About</a>
+    <a class="mobile-nav-link" href="#programs">Programs</a>
+    <a class="mobile-nav-link" href="#impact">Impact</a>
+    <a class="mobile-nav-link" href="#news">News & Events</a>
+    <a class="mobile-nav-link" href="#contact">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a class="mobile-nav-link btn btn-primary" href="#cta-banner" onclick="closeMobileNav()" style="margin-top:8px;justify-content:center;">Get Involved</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="assets/img_02.png" alt="TAMCO Logo" style="width:52px;height:52px;object-fit:contain;">
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">TAMCO</span>
+        <span class="nav-logo-sub">Tanzania · Conservation</span>
+      </div>
+    </a>
+
+    <ul class="nav-menu">
+      <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+      <li class="nav-item">
+        <button class="nav-link">About <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown">
+          <a href="#about">About Us</a>
+          <a href="#about" onclick="setTimeout(()=>scrollToSection('mission'),100)">Mission</a>
+          <a href="#about" onclick="setTimeout(()=>scrollToSection('vision'),100)">Vision</a>
+          <a href="#contact">Our Team</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link">Programs <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown">
+          <a href="#programs" onclick="openProgramModal('agriculture')">Smart Agriculture</a>
+          <a href="#programs" onclick="openProgramModal('mangrove')">Mangrove Restoration</a>
+          <a href="#programs" onclick="openProgramModal('agroforestry')">Agroforestry</a>
+          <a href="#programs" onclick="openProgramModal('livelihood')">Livelihood Support</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+      <li class="nav-item"><a class="nav-link" href="#news">News & Events</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="nav-search-btn" onclick="openSearch()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <a href="#cta-banner" class="btn btn-accent nav-cta">Get Involved</a>
+    </div>
+
+    <button class="hamburger" onclick="openMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-texture"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Reg. No. 8442 · Kilwa District, Lindi Region
+      </div>
+      <h1 class="hero-title">Restoring <em>Ecosystems,</em><br>Empowering Communities</h1>
+      <p class="hero-desc">A community-rooted NGO registered under the NGO Act No. 24 of 2002 — linking conservation with community development to address environmental degradation and rural poverty across Tanzania.</p>
+      <div class="hero-buttons">
+        <a href="#cta-banner" class="btn btn-accent">Get Involved →</a>
+        <a href="#about" class="btn btn-outline-white">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num" id="counter-trees">0</div>
+          <div class="hero-stat-label">Mangrove Seedlings Planted</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" id="counter-communities">0</div>
+          <div class="hero-stat-label">Hectares Restored</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" id="counter-farmers">0</div>
+          <div class="hero-stat-label">Fruit & Shade Seedlings</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" id="counter-hectares">0</div>
+          <div class="hero-stat-label">Youth & Women Empowered</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <div class="about-image-main" style="background-image:url('assets/img_01.jpg')"></div>
+        <div class="about-image-badge">
+          <div class="about-badge-year">NGO</div>
+          <div class="about-badge-text">No. 8442</div>
+        </div>
+        <div class="about-image-card">
+          <div class="about-card-num">288.8</div>
+          <div class="about-card-label">Hectares of Mangrove<br>Restored</div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">Rooted in Kilwa,<br>Growing for Tanzania</h2>
+        <p class="section-subtitle">TAMCO is a community-rooted NGO based in Kilwa District, Lindi Region, registered under the NGO Act No. 24 of 2002 (No. 8442) — operating across Tanzania to link conservation with community development.</p>
+
+        <div class="about-pillars" id="mission">
+          <div class="pillar">
+            <div class="pillar-icon">🌿</div>
+            <div>
+              <div class="pillar-title">About TAMCO</div>
+              <div class="pillar-desc">TAMCO was founded to address the dual challenges of environmental degradation and rural poverty by linking conservation with community development across Tanzania.</div>
+            </div>
+          </div>
+          <div class="pillar" id="vision">
+            <div class="pillar-icon">🎯</div>
+            <div>
+              <div class="pillar-title">Our Mission</div>
+              <div class="pillar-desc">To enhance sustainable livelihoods and prevent biodiversity loss by advocating for responsible land use through community outreach and research on agroforestry practices and marine ecosystems.</div>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌍</div>
+            <div>
+              <div class="pillar-title">Our Vision</div>
+              <div class="pillar-desc">A thriving community empowered through sustainable agroforestry and marine conservation practices that promote resilient ecosystems for future generations.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="section" style="background:var(--white);">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:56px;">
+      <div class="reveal">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Our Programs</h2>
+        <p class="section-subtitle">Three integrated pillars driving sustainable change across Tanzania's landscapes and coastlines.</p>
+      </div>
+      <a href="#programs" class="btn btn-secondary reveal" style="white-space:nowrap">View All Programs</a>
+    </div>
+
+    <div class="programs-grid">
+      <div class="program-card reveal" onclick="openProgramModal('agriculture')">
+        <div class="program-image" style="background-image:url('assets/img_03.jpg'); background-position: center;">
+          <span class="program-tag">Smart Agriculture</span>
+        </div>
+        <div class="program-body">
+          <h3 class="program-title">Smart Agriculture</h3>
+          <p class="program-desc">Introducing climate-smart farming practices that boost yields while conserving soil, water, and biodiversity across Tanzanian smallholder communities.</p>
+          <ul class="program-bullets">
+            <li>Drought-resistant crop varieties</li>
+            <li>Soil health & composting training</li>
+            <li>Water harvesting systems</li>
+            <li>Digital farmer extension services</li>
+          </ul>
+          <a class="program-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <div class="program-card reveal reveal-delay-1" onclick="openProgramModal('mangrove')">
+        <div class="program-image" style="background-image:url('assets/img_03.jpg'); background-position: center top;">
+          <span class="program-tag">Marine Conservation</span>
+        </div>
+        <div class="program-body">
+          <h3 class="program-title">Mangrove Restoration</h3>
+          <p class="program-desc">Rehabilitating Tanzania's degraded mangrove ecosystems through community-led planting campaigns and coastal fisheries protection programs.</p>
+          <ul class="program-bullets">
+            <li>Community nursery establishment</li>
+            <li>Coastal erosion prevention</li>
+            <li>Marine biodiversity monitoring</li>
+            <li>Blue carbon sequestration</li>
+          </ul>
+          <a class="program-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <div class="program-card reveal reveal-delay-2" onclick="openProgramModal('agroforestry')">
+        <div class="program-image" style="background-image:url('assets/img_04.jpg'); background-position: center;">
+          <span class="program-tag">Agroforestry</span>
+        </div>
+        <div class="program-body">
+          <h3 class="program-title">Agroforestry & Forest Conservation</h3>
+          <p class="program-desc">Integrating indigenous trees with food crops to restore degraded lands, sequester carbon, and provide sustainable timber and non-timber forest products.</p>
+          <ul class="program-bullets">
+            <li>Native species propagation</li>
+            <li>Farmer-managed natural regeneration</li>
+            <li>Forest carbon projects (REDD+)</li>
+            <li>Beekeeping & forest products</li>
+          </ul>
+          <a class="program-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="program-card reveal reveal-delay-3" onclick="openProgramModal('livelihood')">
+        <div class="program-image" style="background-image:url('assets/img_03.jpg'); background-position: center;">
+          <span class="program-tag">Livelihood Support</span>
+        </div>
+        <div class="program-body">
+          <h3 class="program-title">Livelihood Support</h3>
+          <p class="program-desc">Providing training, microfinance and market access to help communities build sustainable income streams from conservation activities.</p>
+          <ul class="program-bullets">
+            <li>Microfinance & savings groups</li>
+            <li>Market linkages for conservation products</li>
+            <li>Vocational skills training</li>
+            <li>Women & youth income programmes</li>
+          </ul>
+          <a class="program-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact" class="section">
+  <div class="impact-bg"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="impact-header reveal">
+      <div class="section-label">Our Impact</div>
+      <h2 class="section-title">Numbers That Tell Our Story</h2>
+      <p class="section-subtitle">A decade of work measured in restored ecosystems, empowered farmers, and thriving communities.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card reveal">
+        <span class="impact-icon">🌱</span>
+        <div class="impact-num"><span id="imp-trees">0</span>K+</div>
+        <div class="impact-label">Trees Planted & Surviving</div>
+      </div>
+      <div class="impact-card reveal reveal-delay-1">
+        <span class="impact-icon">🌊</span>
+        <div class="impact-num"><span id="imp-communities">0</span>.8 ha</div>
+        <div class="impact-label">Mangrove Forest Restored</div>
+      </div>
+      <div class="impact-card reveal reveal-delay-2">
+        <span class="impact-icon">🌳</span>
+        <div class="impact-num"><span id="imp-farmers">0</span>K+</div>
+        <div class="impact-label">Fruit & Shade Seedlings Planted</div>
+      </div>
+      <div class="impact-card reveal reveal-delay-3">
+        <span class="impact-icon">👩‍🌾</span>
+        <div class="impact-num"><span id="imp-hectares">0</span></div>
+        <div class="impact-label">Youth & Women Empowered as Environmental Stewards</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS & EVENTS -->
+<section id="news" class="section">
+  <div class="container">
+    <div class="news-header">
+      <div class="reveal">
+        <div class="section-label">Latest Updates</div>
+        <h2 class="section-title">News & Events</h2>
+      </div>
+      <div class="news-filters reveal">
+        <button class="filter-btn active" onclick="filterNews('all', this)">All</button>
+        <button class="filter-btn" onclick="filterNews('event', this)">Events</button>
+        <button class="filter-btn" onclick="filterNews('field', this)">Field Activities</button>
+        <button class="filter-btn" onclick="filterNews('announcement', this)">Announcements</button>
+      </div>
+    </div>
+    <div class="news-grid" id="news-grid">
+      <!-- populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta-banner">
+  <div class="container">
+    <div class="section-label" style="justify-content:center;color:var(--mint);"><span style="background:var(--mint);width:24px;height:2px;display:block;"></span>Take Action</div>
+    <h2 class="cta-title">Join Us in Restoring <em>Nature</em></h2>
+    <p class="cta-desc">Whether you donate, volunteer, or partner — every contribution plants seeds for a healthier Tanzania.</p>
+    <div class="cta-buttons">
+      <a class="btn btn-accent" href="#contact" onclick="prefillContact('Donation inquiry')">❤ Donate</a>
+      <a class="btn btn-outline-white" href="#contact" onclick="prefillContact('Volunteer application')">✋ Volunteer</a>
+      <a class="btn" style="background:rgba(255,255,255,0.15);color:white;border:1.5px solid rgba(255,255,255,0.4);" href="#contact" onclick="prefillContact('Partnership proposal')">🤝 Partner With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto 56px;" class="reveal">
+      <div class="section-label" style="justify-content:center;">Get In Touch</div>
+      <h2 class="section-title">Contact TAMCO</h2>
+      <p class="section-subtitle">Ready to collaborate? Reach out and let's grow something meaningful together.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📍</div>
+          <div>
+            <div class="contact-info-label">Address</div>
+            <div class="contact-info-value">Kilwa District<br>Lindi Region, Tanzania</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📧</div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">info@tamco.org.tz</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📞</div>
+          <div>
+            <div class="contact-info-label">Phone</div>
+            <div class="contact-info-value">+255 755 070 283</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🕐</div>
+          <div>
+            <div class="contact-info-label">Office Hours</div>
+            <div class="contact-info-value">Mon – Fri: 8:00 AM – 5:00 PM</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-delay-1">
+        <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;color:var(--forest);margin-bottom:24px;font-weight:600;">Send Us a Message</h3>
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input class="form-input" type="text" id="contact-name" placeholder="e.g. Justin Mgeni">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input class="form-input" type="email" id="contact-email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <input class="form-input" type="text" id="contact-subject" placeholder="How can we help?">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" id="contact-message" placeholder="Tell us about your interest in TAMCO…"></textarea>
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="submitContactForm()">Send Message →</button>
+        <div class="form-success" id="form-success">✓ Message sent! We'll get back to you within 2 business days.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <img src="assets/img_02.png" alt="TAMCO Logo" style="width:56px;height:56px;object-fit:contain;filter:brightness(0) invert(1);">
+        </div>
+        <p class="footer-desc">Tanzania Agroforestry & Marine Conservation Organisation — enhancing sustainable livelihoods and preventing biodiversity loss through responsible land use and community outreach across Tanzania.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#" title="Facebook">f</a>
+          <a class="social-btn" href="#" title="Twitter">𝕏</a>
+          <a class="social-btn" href="#" title="Instagram">◎</a>
+          <a class="social-btn" href="#" title="LinkedIn">in</a>
+          <a class="social-btn" href="#" title="YouTube">▶</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#impact">Our Impact</a></li>
+          <li><a href="#news">News & Events</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#cta-banner">Donate</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Programs</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="openProgramModal('agriculture')">Smart Agriculture</a></li>
+          <li><a href="#" onclick="openProgramModal('mangrove')">Mangrove Restoration</a></li>
+          <li><a href="#" onclick="openProgramModal('agroforestry')">Agroforestry</a></li>
+          <li><a href="#" onclick="openProgramModal('livelihood')">Livelihood Support</a></li>
+          <li><a href="#contact">Partner With Us</a></li>
+          <li><a href="#contact">Volunteer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Newsletter</div>
+        <p class="newsletter-label">Get TAMCO updates delivered to your inbox monthly.</p>
+        <div class="newsletter-form">
+          <input class="newsletter-input" type="email" id="newsletter-email" placeholder="Your email">
+          <button class="newsletter-submit" onclick="subscribeNewsletter()">Join</button>
+        </div>
+        <div id="newsletter-success" style="display:none;color:var(--mint);font-size:0.82rem;margin-top:10px;">✓ You're subscribed!</div>
+
+        <div style="margin-top:28px;">
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item"><div><strong>Address</strong>Kilwa District, Lindi Region, Tanzania</div></div>
+          <div class="footer-contact-item"><div><strong>Email</strong>info@tamco.org.tz</div></div>
+          <div class="footer-contact-item"><div><strong>Phone</strong>+255 755 070 283</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2025 TAMCO – Tanzania Agroforestry & Marine Conservation Organisation. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Annual Report</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // --- DATA ---
+  // News articles are now loaded dynamically from data/news.json
+  // This file can be edited through the /admin content management panel
+  let newsData = [];
+
+  const programData = {
+    agriculture: {
+      title: 'Smart Agriculture Program',
+      tag: 'Smart Agriculture',
+      image: 'assets/img_03.jpg',
+      content: `<p>TAMCO's Smart Agriculture program trains women and youth farmers on climate-smart agriculture practices that boost yields while protecting natural resources and securing community livelihoods.</p><p>Working closely with communities in Kilwa District and beyond, TAMCO introduces drought-resilient crops — including sunflower — and sustainable soil management techniques that help farmers adapt to a changing climate.</p><p><strong>Key activities:</strong></p><p>• Training women and youth on climate-smart agriculture<br>• Introducing drought-resilient crops including sunflower<br>• Sustainable soil management and composting<br>• Rainwater harvesting system construction<br>• Income generation for smallholder farming families</p><p>Through this program, TAMCO empowers communities — especially women and youth — to become active stewards of their environment while securing new income opportunities.</p>`
+    },
+    mangrove: {
+      title: 'Mangrove Restoration Program',
+      tag: 'Marine Conservation',
+      image: 'assets/img_03.jpg',
+      content: `<p>TAMCO leads mangrove reforestation initiatives along the Kilwa coast to restore degraded areas, acting as natural barriers against coastal erosion and the impacts of climate change. We work with schools, youth groups, and community associations to raise awareness and actively engage them in tree planting.</p><p>Our coastal restoration work has achieved remarkable results — making TAMCO one of the most active mangrove restoration organisations in the Lindi Region.</p><p><strong>Key achievements:</strong></p><p>• Restored 288.8 hectares of mangrove forests critical for marine biodiversity and coastal protection<br>• Planted more than 486,509 mangrove seedlings along the Kilwa coast<br>• Engaged schools, youth groups, and community associations in active planting campaigns<br>• Reduced coastal erosion and improved marine habitat for local fisheries<br>• Raised community awareness on the importance of mangrove ecosystems</p>`
+    },
+    agroforestry: {
+      title: 'Agroforestry & Forest Conservation',
+      tag: 'Agroforestry',
+      image: 'assets/img_04.jpg',
+      content: `<p>TAMCO's Agroforestry & Forest Conservation program trains farmers on tree nursery establishment and sustainable woodlot management, reducing pressure on natural forests while creating new income streams for rural communities.</p><p>By integrating trees into farming landscapes, TAMCO helps restore soil fertility, provide shade, and generate sustainable income through fruit trees and other forest products — all while protecting Tanzania's remaining natural forest cover.</p><p><strong>Key activities:</strong></p><p>• Training farmers on tree nursery establishment and management<br>• Sustainable woodlot management to reduce pressure on natural forests<br>• Planted more than 5,700 fruit and shading seedlings<br>• Community tree nursery establishment<br>• Empowering youth and women as environmental stewards<br>• Income generation through fruit trees and forest products</p><p>Through this program, TAMCO empowers communities to manage their landscapes sustainably while securing long-term livelihoods.</p>`
+    },
+    livelihood: {
+      title: 'Livelihood Support Program',
+      tag: 'Livelihood Support',
+      image: 'assets/img_03.jpg',
+      content: `<p>TAMCO's Livelihood Support program ensures that conservation activities translate into real, lasting economic benefits for communities. By providing training, microfinance, and market access, TAMCO helps families build sustainable income streams directly linked to environmental stewardship.</p><p>The program recognises that long-term conservation success depends on communities having viable economic alternatives — making livelihoods and ecosystems mutually reinforcing rather than competing priorities.</p><p><strong>Key activities:</strong></p><p>• Microfinance and savings group formation for women and youth<br>• Training in business skills and financial management<br>• Market linkages for conservation products (honey, timber, fruit)<br>• Vocational skills training tied to agroforestry and marine conservation<br>• Income generation from mangrove-related products and ecotourism<br>• Connecting communities to regional and national markets</p><p>Through this program, TAMCO empowers communities — especially women and youth — to become active stewards of their environment while securing new and sustainable income opportunities.</p>`
+    }
+  };
+
+  // --- NAV SCROLL ---
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // --- MOBILE NAV ---
+  function openMobileNav() { document.getElementById('mobile-nav').style.display = 'block'; document.body.style.overflow = 'hidden'; }
+  function closeMobileNav() { document.getElementById('mobile-nav').style.display = 'none'; document.body.style.overflow = ''; }
+
+  // --- SEARCH ---
+  const searchIndex = [
+    { title: 'Smart Agriculture Program', section: '#programs' },
+    { title: 'Mangrove Restoration', section: '#programs' },
+    { title: 'Agroforestry & Forest Conservation', section: '#programs' },
+    { title: 'Our Impact — Trees, Communities, Farmers', section: '#impact' },
+    { title: 'Annual Conservation Forum 2025', section: '#news' },
+    { title: 'Livelihood Support Program', section: '#programs' },
+    { title: 'Contact TAMCO', section: '#contact' },
+    { title: 'Donate to TAMCO', section: '#cta-banner' },
+    { title: 'Volunteer with TAMCO', section: '#cta-banner' },
+    { title: 'About TAMCO — Mission & Vision', section: '#about' },
+  ];
+  function openSearch() { document.getElementById('search-overlay').classList.add('open'); document.getElementById('search-input').focus(); }
+  function closeSearch() { document.getElementById('search-overlay').classList.remove('open'); document.getElementById('search-results').innerHTML = ''; document.getElementById('search-input').value = ''; }
+  document.getElementById('search-input').addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    const res = document.getElementById('search-results');
+    if (!q) { res.innerHTML = ''; return; }
+    const matches = searchIndex.filter(i => i.title.toLowerCase().includes(q));
+    res.innerHTML = matches.length ? matches.map(m => `<div class="search-result-item" onclick="closeSearch();document.querySelector('${m.section}').scrollIntoView({behavior:'smooth'})">${m.title}</div>`).join('') : '<div style="color:var(--text-light);font-size:0.88rem;padding:8px 0;">No results found</div>';
+  });
+  document.addEventListener('keydown', e => { if(e.key==='Escape'){closeSearch();closeModal();} });
+
+  // --- MODAL ---
+  function openModal(html) {
+    document.getElementById('modal-content').innerHTML = html;
+    document.getElementById('modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function openProgramModal(key) {
+    const p = programData[key];
+    openModal(`
+      <div class="modal-header">
+        <h2 class="modal-title">${p.title}</h2>
+        <button class="modal-close" onclick="closeModal()">×</button>
+      </div>
+      <div class="modal-image" style="background-image:url('${p.image}')"></div>
+      <div class="modal-body">
+        <div class="modal-meta"><span style="background:var(--forest);color:white;padding:4px 12px;border-radius:50px;font-size:0.75rem;">${p.tag}</span></div>
+        <div class="modal-content">${p.content}</div>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn btn-primary" href="#contact" onclick="closeModal()">Get Involved</a>
+          <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+    `);
+  }
+
+  // Convert plain text with blank-line-separated paragraphs into HTML.
+  // If the content already looks like HTML (contains a tag), leave it as-is —
+  // this keeps the original sample articles working unchanged.
+  function formatContent(text) {
+    if (!text) return '';
+    if (/<\/?[a-z][\s\S]*>/i.test(text)) return text; // already HTML
+    return text
+      .split(/\n\s*\n/)
+      .map(p => `<p>${p.trim().replace(/\n/g, '<br>')}</p>`)
+      .join('');
+  }
+
+  function openNewsModal(id) {
+    const n = newsData.find(x => x.id === id);
+    openModal(`
+      <div class="modal-header">
+        <h2 class="modal-title">${n.title}</h2>
+        <button class="modal-close" onclick="closeModal()">×</button>
+      </div>
+      <div class="modal-image" style="background-image:url('${n.image}')"></div>
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span style="background:var(--accent);color:white;padding:4px 12px;border-radius:50px;font-size:0.75rem;">${n.categoryLabel}</span>
+          <span style="margin-left:12px;color:var(--text-light);font-size:0.85rem;">📅 ${n.date}</span>
+        </div>
+        <div class="modal-content" style="margin-top:16px;">${formatContent(n.content)}</div>
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn btn-primary" href="#contact" onclick="closeModal()">Contact Us</a>
+          <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+    `);
+  }
+
+  // --- NEWS GRID ---
+  function formatDate(dateStr) {
+    // Accepts ISO (YYYY-MM-DD) or already-formatted strings
+    if (/^\d{4}-\d{2}-\d{2}/.test(dateStr)) {
+      const d = new Date(dateStr);
+      return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    }
+    return dateStr;
+  }
+
+  function renderNews(filter) {
+    const data = filter === 'all' ? newsData : newsData.filter(n => n.category === filter);
+    const grid = document.getElementById('news-grid');
+    if (!data.length) {
+      grid.innerHTML = '<p style="color:var(--text-light);text-align:center;grid-column:1/-1;padding:40px 0;">No news articles yet. Check back soon!</p>';
+      return;
+    }
+    grid.innerHTML = data.map(n => `
+      <div class="news-card" onclick="openNewsModal(${n.id})">
+        <div class="news-image" style="background-image:url('${n.image}')">
+          <span class="news-category">${n.categoryLabel}</span>
+        </div>
+        <div class="news-body">
+          <div class="news-date">📅 ${formatDate(n.date)}</div>
+          <h3 class="news-title">${n.title}</h3>
+          <p class="news-excerpt">${n.excerpt}</p>
+          <span class="news-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+    `).join('');
+  }
+  function filterNews(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderNews(cat);
+  }
+
+  // Fetch news from data/news.json (editable via /admin CMS)
+  fetch('data/news.json')
+    .then(res => res.json())
+    .then(data => {
+      // Sort newest first by date
+      newsData = (data.items || []).map((item, idx) => ({
+        id: item.id || (idx + 1),
+        category: (item.category || '').toLowerCase().replace(/\s+/g, '').includes('field') ? 'field'
+                 : (item.category || '').toLowerCase().includes('announce') ? 'announcement'
+                 : (item.category || '').toLowerCase().includes('event') ? 'event'
+                 : (item.category || 'event'),
+        categoryLabel: item.categoryLabel || item.category || 'Event',
+        title: item.title || '',
+        date: item.date || '',
+        excerpt: item.excerpt || '',
+        image: item.image || 'assets/img_03.jpg',
+        content: item.content || `<p>${item.excerpt || ''}</p>`
+      })).sort((a, b) => new Date(b.date) - new Date(a.date) || (b.id - a.id));
+      renderNews('all');
+    })
+    .catch(err => {
+      console.error('Could not load news.json', err);
+      document.getElementById('news-grid').innerHTML = '<p style="color:var(--text-light);text-align:center;grid-column:1/-1;padding:40px 0;">Unable to load news right now. Please try again later.</p>';
+    });
+
+
+  // --- COUNTERS ---
+  const counters = [
+    { id: 'counter-trees', target: 486509, suffix: '', formatter: n => n.toLocaleString() },
+    { id: 'counter-communities', target: 288, suffix: '', formatter: n => n },
+    { id: 'counter-farmers', target: 5700, suffix: '', formatter: n => n.toLocaleString() },
+    { id: 'counter-hectares', target: 500, suffix: '', formatter: n => n },
+    { id: 'imp-trees', target: 486, suffix: '', formatter: n => n },
+    { id: 'imp-communities', target: 288, suffix: '', formatter: n => n },
+    { id: 'imp-farmers', target: 5, suffix: '', formatter: n => n },
+    { id: 'imp-hectares', target: 500, suffix: '', formatter: n => n },
+  ];
+  const counterTriggered = {};
+  function animateCounter(id, target, formatter) {
+    if (counterTriggered[id]) return;
+    counterTriggered[id] = true;
+    const el = document.getElementById(id);
+    if (!el) return;
+    let start = 0;
+    const duration = 1800;
+    const step = timestamp => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = formatter(Math.round(ease * target));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  // --- REVEAL + COUNTER OBSERVER ---
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        // trigger counters when impact section visible
+        if (e.target.id === 'impact' || e.target.closest('#impact')) {
+          counters.filter(c => c.id.startsWith('imp')).forEach(c => animateCounter(c.id, c.target, c.formatter));
+        }
+        if (e.target.id === 'hero' || e.target.closest('#hero')) {
+          counters.filter(c => c.id.startsWith('counter')).forEach(c => animateCounter(c.id, c.target, c.formatter));
+        }
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.getElementById('impact').querySelectorAll('.impact-card').forEach(el => observer.observe(el));
+
+  // trigger hero counters after short delay
+  setTimeout(() => {
+    counters.filter(c => c.id.startsWith('counter')).forEach(c => animateCounter(c.id, c.target, c.formatter));
+  }, 800);
+
+  // --- CONTACT FORM ---
+  function prefillContact(subject) {
+    const subEl = document.getElementById('contact-subject');
+    if (subEl) subEl.value = subject;
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  }
+  function submitContactForm() {
+    const name = document.getElementById('contact-name').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const msg = document.getElementById('contact-message').value.trim();
+    if (!name || !email || !msg) { alert('Please fill in all fields.'); return; }
+    const success = document.getElementById('form-success');
+    success.style.display = 'block';
+    document.getElementById('contact-name').value = '';
+    document.getElementById('contact-email').value = '';
+    document.getElementById('contact-subject').value = '';
+    document.getElementById('contact-message').value = '';
+    setTimeout(() => { success.style.display = 'none'; }, 5000);
+  }
+
+  // --- NEWSLETTER ---
+  function subscribeNewsletter() {
+    const email = document.getElementById('newsletter-email').value.trim();
+    if (!email || !email.includes('@')) { return; }
+    document.getElementById('newsletter-success').style.display = 'block';
+    document.getElementById('newsletter-email').value = '';
+  }
+
+  // smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+  // Handle Netlify Identity login redirects (used by the /admin CMS)
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
