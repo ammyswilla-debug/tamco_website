@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "id": 1,
-      "category": "event",
-      "categoryLabel": "Event",
-      "title": "Annual Conservation Forum 2025 — Kilwa District",
-      "date": "June 14, 2025",
-      "excerpt": "Join conservation practitioners, government officials, and community leaders for two days of dialogue on Tanzania's forest and coastal futures.",
-      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&auto=format&fit=crop&q=70",
-      "content": "<p>TAMCO's Annual Conservation Forum brings together delegates from across Tanzania to share field learnings, celebrate community achievements, and forge new partnerships for ecosystem restoration.</p><p>This year's theme: <strong>\"Landscapes of Hope — Communities Leading Climate Action.\"</strong></p><p>The forum will feature keynote addresses from the Ministry of Natural Resources and Tourism, panel discussions on coastal and agroforestry conservation, and field excursions to TAMCO's flagship mangrove restoration sites along the Kilwa coast.</p><p>Registration is open to NGOs, government agencies, researchers, and community members. Limited seats available — register early.</p>"
-    },
-    {
       "id": 2,
       "category": "field",
       "categoryLabel": "Field Activity",
