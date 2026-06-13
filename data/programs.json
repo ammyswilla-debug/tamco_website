@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "agriculture",
+      "tag": "Smart Agriculture",
+      "title": "Smart Agriculture",
+      "image": "assets/img_03.jpg",
+      "description": "Introducing climate-smart farming practices that boost yields while conserving soil, water, and biodiversity across Tanzanian smallholder communities.",
+      "bullets": [
+        "Drought-resistant crop varieties",
+        "Soil health & composting training",
+        "Water harvesting systems",
+        "Digital farmer extension services"
+      ],
+      "modalTitle": "Smart Agriculture Program",
+      "content": "TAMCO's Smart Agriculture program trains women and youth farmers on climate-smart agriculture practices that boost yields while protecting natural resources and securing community livelihoods.\n\nWorking closely with communities in Kilwa District and beyond, TAMCO introduces drought-resilient crops — including sunflower — and sustainable soil management techniques that help farmers adapt to a changing climate.\n\nKey activities:\n• Training women and youth on climate-smart agriculture\n• Introducing drought-resilient crops including sunflower\n• Sustainable soil management and composting\n• Rainwater harvesting system construction\n• Income generation for smallholder farming families\n\nThrough this program, TAMCO empowers communities — especially women and youth — to become active stewards of their environment while securing new income opportunities."
+    },
+    {
+      "id": "mangrove",
+      "tag": "Marine Conservation",
+      "title": "Mangrove Restoration",
+      "image": "assets/img_03.jpg",
+      "description": "Rehabilitating Tanzania's degraded mangrove ecosystems through community-led planting campaigns and coastal fisheries protection programs.",
+      "bullets": [
+        "Community nursery establishment",
+        "Coastal erosion prevention",
+        "Marine biodiversity monitoring",
+        "Blue carbon sequestration"
+      ],
+      "modalTitle": "Mangrove Restoration Program",
+      "content": "TAMCO leads mangrove reforestation initiatives along the Kilwa coast to restore degraded areas, acting as natural barriers against coastal erosion and the impacts of climate change. We work with schools, youth groups, and community associations to raise awareness and actively engage them in tree planting.\n\nOur coastal restoration work has achieved remarkable results — making TAMCO one of the most active mangrove restoration organisations in the Lindi Region.\n\nKey achievements:\n• Restored 288.8 hectares of mangrove forests critical for marine biodiversity and coastal protection\n• Planted more than 486,509 mangrove seedlings along the Kilwa coast\n• Engaged schools, youth groups, and community associations in active planting campaigns\n• Reduced coastal erosion and improved marine habitat for local fisheries\n• Raised community awareness on the importance of mangrove ecosystems"
+    },
+    {
+      "id": "agroforestry",
+      "tag": "Agroforestry",
+      "title": "Agroforestry & Forest Conservation",
+      "image": "assets/img_04.jpg",
+      "description": "Integrating indigenous trees with food crops to restore degraded lands, sequester carbon, and provide sustainable timber and non-timber forest products.",
+      "bullets": [
+        "Native species propagation",
+        "Farmer-managed natural regeneration",
+        "Forest carbon projects (REDD+)",
+        "Beekeeping & forest products"
+      ],
+      "modalTitle": "Agroforestry & Forest Conservation",
+      "content": "TAMCO's Agroforestry & Forest Conservation program trains farmers on tree nursery establishment and sustainable woodlot management, reducing pressure on natural forests while creating new income streams for rural communities.\n\nBy integrating trees into farming landscapes, TAMCO helps restore soil fertility, provide shade, and generate sustainable income through fruit trees and other forest products — all while protecting Tanzania's remaining natural forest cover.\n\nKey activities:\n• Training farmers on tree nursery establishment and management\n• Sustainable woodlot management to reduce pressure on natural forests\n• Planted more than 5,700 fruit and shading seedlings\n• Community tree nursery establishment\n• Empowering youth and women as environmental stewards\n• Income generation through fruit trees and forest products\n\nThrough this program, TAMCO empowers communities to manage their landscapes sustainably while securing long-term livelihoods."
+    },
+    {
+      "id": "livelihood",
+      "tag": "Livelihood Support",
+      "title": "Livelihood Support",
+      "image": "assets/img_03.jpg",
+      "description": "Providing training, microfinance and market access to help communities build sustainable income streams from conservation activities.",
+      "bullets": [
+        "Microfinance & savings groups",
+        "Market linkages for conservation products",
+        "Vocational skills training",
+        "Women & youth income programmes"
+      ],
+      "modalTitle": "Livelihood Support Program",
+      "content": "TAMCO's Livelihood Support program ensures that conservation activities translate into real, lasting economic benefits for communities. By providing training, microfinance, and market access, TAMCO helps families build sustainable income streams directly linked to environmental stewardship.\n\nThe program recognises that long-term conservation success depends on communities having viable economic alternatives — making livelihoods and ecosystems mutually reinforcing rather than competing priorities.\n\nKey activities:\n• Microfinance and savings group formation for women and youth\n• Training in business skills and financial management\n• Market linkages for conservation products (honey, timber, fruit)\n• Vocational skills training tied to agroforestry and marine conservation\n• Income generation from mangrove-related products and ecotourism\n• Connecting communities to regional and national markets\n\nThrough this program, TAMCO empowers communities — especially women and youth — to become active stewards of their environment while securing new and sustainable income opportunities."
+    }
+  ]
+}
